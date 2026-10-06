@@ -1,0 +1,53 @@
+.box{
+       height:100vh;
+       width:100%;
+       background-color:salmon;
+       display:flex;
+       align-items:center;
+       justify-content: space-evenly;
+       
+
+}
+
+.parent img{
+       height: 200px;
+       width:200px;
+}
+
+.parent img:first-child:hover{
+       transform:rotate(3600deg);
+       transition:10s;
+}
+.parent img:nth-child(2):hover{
+       transform:rotate(3600deg);
+       transition:10s;
+}
+.parent img:nth-child(3):hover{
+       transform:translate(-1500px,-800px) scale(0.1);
+       transition:6s;
+}
+.parent img:nth-child(4):hover{
+       transform: scale(2);
+       transition:6s;
+}
+.parent img:nth-child(5):hover{
+       transform: skew(180deg);
+       transition:3s;
+}
+
+/* .box:hover{ 
+       /* transform:scale(2);
+       transform:scaleY(1.5);
+       transform:scaleX(1.5); */
+       /* transform:skew(50deg);
+       transform:skew(-50deg); */
+       /* transform: rotate(260deg);
+       transform:rotateY(360);
+       transform:rotateX(360); */
+       /* transform:translate(200px); */
+       /* transition:2s; 
+
+ }*/
+
+
+
