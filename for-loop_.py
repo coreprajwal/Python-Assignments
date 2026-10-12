@@ -91,6 +91,75 @@
 ##print(s)
 
 
+#Print numbers from 1 to 10
+
+##for i in range(1,11):
+##    print(i)
+
+# Print even numbers from 1 to 50
+
+##for i in range(1,51):
+##    if i%2==0:
+##        print(i)
+
+
+# print multiplication table of a number
+
+
+##n=int(input("Enter number:"))
+##for i in range(1,11):
+##    print(f"{n}*{i}={n*i}")
+
+
+#Count digits in a number (using string loop)
+
+
+##n=int(input("Enter number:"))
+##c=0
+##for i in str(n):
+##    c+=1
+##print(c)
+    
+
+# WAP to rotate a list by k value without loop. *****************
+
+##k=1
+##l=[10,1,2,6,4,12]
+##k=k%len(l)
+##print(l[-k::]+l[:-k:])
+
+
+# WAP to rotate a list by k value without loop.
+
+##k=4
+##ls=[1,2,3,4,5]
+##
+##for i in range(4):
+##    ls.insert(0,ls.pop())
+##
+##print(ls)
+
+
+# WAP to check if 2 strings are rotation of each other or not.
+
+st=input("Enter string:")
+strr=input("Enter rotated string:")
+
+if st in strr+strr and len(st)==len(strr):
+    print("Rotated")
+else:
+    print("Not rotated")
+
+
+## not allowed to use in operator----- try this
+
+
+
+
+
+
+
+
 
 
 
