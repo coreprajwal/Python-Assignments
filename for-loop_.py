@@ -142,23 +142,112 @@
 
 # WAP to check if 2 strings are rotation of each other or not.
 
-st=input("Enter string:")
-strr=input("Enter rotated string:")
-
-if st in strr+strr and len(st)==len(strr):
-    print("Rotated")
-else:
-    print("Not rotated")
+##st=input("Enter string:")
+##strr=input("Enter rotated string:")
+##
+##if st in strr+strr and len(st)==len(strr):
+##    print("Rotated")
+##else:
+##    print("Not rotated")
 
 
 ## not allowed to use in operator----- try this
 
 
+##WAP to find a pair in a list
+## who's sum is equal to the target element (sum equal to target element)
+##        ***************************
+##target=9
+##ls=[10,20,30,-1,8,6,100,1]
+##
+##res=set()
+##
+##for i in ls:
+##    if i<=target:
+##        n=target -i
+##        if n in ls:
+##            res.add(((i,n)))
+##            ls.remove(n)
+####    else:
+####        n=i - target
+####        if n in ls:
+####            res.append((i,n))
+##
+##
+##print(list(res))
+
+
+##l=[12,34,-3,10,8,3,6,1]
+##t=9
+##h=set()
+##res=[]
+##
+##for i in l:
+##    if t-i in h:
+##        res.append((t-i,i))
+##    h.add(i)
+##print(i)
+        
+
+
+# Wap to check whether the given number is a power of 2 or not.
+#with for loop
 
 
 
 
 
+
+# Find common elements between two lists (without intersection)
+
+##ls1=[1,2,2,3,4,5]
+##ls2=[11,2,3,44,55]
+##res=[]
+##for i in range(len(ls1)):
+##    if ls1[i] in ls2:
+##        res.append(ls1[i])
+##        ls2.remove(ls1[i])
+##
+##print(res)
+
+
+
+# Wap to print all the element of 2 list without repeating any
+##number--- no set, allowed single loop, no concatinate list
+
+##ls= [1,2,3]
+##ls2=[2,11,22,33]
+##
+##a=ls.copy()
+##ls.extend(ls2)
+##
+##h=[]
+##
+##for i in ls:
+##    if i not in h:
+##        print(i)
+##        h.append(i)
+
+
+# Wap second largest number in a list. (no set)
+
+
+# Remove duplicate elements from list (without using set).
+
+org=[2,3,1,2,5,1,8]
+ls=org
+
+h=[]
+for i in ls:
+    if i not in h:
+        h.append(i)
+    else:
+        org.remove(i)
+
+print(org)
+
+    
+        
 
 
 
