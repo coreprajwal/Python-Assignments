@@ -228,23 +228,145 @@
 ##        print(i)
 ##        h.append(i)
 
-
-# Wap second largest number in a list. (no set)
+##ls= [1,2,3]
+##ls2=[2,11,22,33]
+##res=[]
+##
+##if len(ls)>=len(ls2):
+##    temp_1=ls
+##    temp_2=ls2
+##else:
+##    temp_1=ls2
+##    temp_2=ls
+##
+##for i in range(len(temp_1)):
+##    if i<len(temp_2) and (temp_2[i] not in res) and temp_1[i] not in res:
+##        res.extend((temp_2[i],temp_1[i]))
+##    else:
+##        res.append(temp_1[i])
+##print(res)
 
 
 # Remove duplicate elements from list (without using set).
 
-org=[2,3,1,2,5,1,8]
-ls=org
+##org=[2,3,1,2,5,1,8]
+##ls=org
+##
+##h=[]
+##for i in ls:
+##    if i not in h:
+##        h.append(i)
+##    else:
+##        org.remove(i)
+##
+##print(org)
 
-h=[]
-for i in ls:
-    if i not in h:
-        h.append(i)
-    else:
-        org.remove(i)
+# Wap second largest number in a list. (no set)
 
-print(org)
+
+##ls=[1,2,4,6,6]
+##
+##l=float('-inf')
+##sl=float('-inf')
+##
+##
+##for i in ls:
+##    if i>l:
+##        sl=l
+##        l=i
+##    elif l>i>=sl:
+##        sl=i
+##    
+##if sl==float('-inf'):
+##    print("No 2nd highest")
+##else:
+##    print(sl)
+
+
+
+
+
+#Count frequency of each character in string.
+
+##s='chaotic'
+##temp=s.lower()
+##f={}
+##
+##for i in s:
+##    if i not in f.keys():
+##        f[i]=1
+##    else:
+##        f[i]+=1
+##print(f)
+
+
+
+
+##WAP to convert uppercase string into lowercase without using methods
+##s='BANA#%%NAaa'
+##r=''
+##
+##for i in s:
+##    if 'A'<=i<='Z':
+##        r+=chr(ord(i)+32)
+##    else:
+##        r+=i
+##print(r)
+
+    
+##WAP to check if a number is a power of 2 or not
+# can't use bitwise,
+##hint : don't use for loop
+
+
+##n=2
+##r=''
+##i=0
+##while n!=0:
+##    r+=str(n%2)
+##    n=n//2
+##
+##r=r[::-1]
+##
+##if int(r[0])==1 and int(r[1::])==0:
+##    print("Power of 2")
+##else:
+##    print("Not a power of 2")
+
+
+a=eval(input("Enter number:"))
+
+i=a
+while i>1 and i%2==0:
+    i//=2
+
+if i==1:
+    print("power of 2")
+else:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
         
