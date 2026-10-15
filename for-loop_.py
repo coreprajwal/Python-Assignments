@@ -334,52 +334,41 @@
 ##    print("Not a power of 2")
 
 
-a=eval(input("Enter number:"))
-
-i=a
-while i>1 and i%2==0:
-    i//=2
-
-if i==1:
-    print("power of 2")
-else:
-
-
-
+##a=eval(input("Enter number:"))
+##
+##i=a
+##while i>1 and i%2==0:
+##    i//=2
+##
+##if i==1:
+##    print("power of 2")
+##else:
+##    print("Not power of 2")
 
 
 
+# Find the missing number from 1 to n in a list (without loop)
+##ls=[10,2,4,3,6,7,8,5,9,1]
+##n=10
+##
+##i=n
+##while n>1:
+##    if n-1 not in ls:
+##        print(n-1,"is missing number")
+##    n-=1
+
+##a=[1,2,3,4,5]
+##s=0
+##for i in a:
+##    s+=i
+##
+##large=len(a)+1
+##print((large*(large+1)//2)-s)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-        
-
-
-
-
-
-
-
-
-
-
+##for i in range(1,n+1):
+##    if n-1 not in n:
+##        print(n-1,"is the missing number")
 
 
 
