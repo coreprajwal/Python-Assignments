@@ -128,15 +128,30 @@
 
 
 
-n=5
-for i in range(n+1):
-    print(f'{"* "*i:^10}')
+##n=5
+##for i in range(n+1):
+##    print(f'{"* "*i:^10}')
    
 
 
 
+##ls=[1,-5,2,0.5]
+##
+##summ=0
+##for i in ls:
+##    if type(i)==type(5):
+##        summ+=i
+##
+##print(summ)
 
 
+s="Hello"
+r=""
+
+for i in range(-1,(-len(s)+1,-1):
+    r+=s[i]
+
+print(r)
 
 
 
