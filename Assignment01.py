@@ -840,6 +840,8 @@
 ##    i+=1
 ##print(output)
 
+
+
 ##University admission logic (cutoff + entrance test
 ##+ reserved category).
 

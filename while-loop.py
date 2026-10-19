@@ -371,37 +371,93 @@
 #Wap program to check if a number is an armstrong number.
 
 
-num=int(input("Enter nummber:"))
-org_n=num
-count=0
-i=0
-while num:
-    rem=num%10
-    count+=1
-    num=num//10
-    i+=1
-
-res=0
-temp=org_n
-while org_n:
-    rem=org_n%10
-    res+=rem**count
-    org_n=org_n//10
-    
-
-if res==temp:
-    print("Armstrong number")
-else:
-    print("Not an armstrong number")
-
-
+##num=int(input("Enter nummber:"))
+##org_n=num
+##count=0
+##i=0
+##while num:
+##    rem=num%10
+##    count+=1
+##    num=num//10
+##    i+=1
+##
+##res=0
+##temp=org_n
+##while org_n:
+##    rem=org_n%10
+##    res+=rem**count
+##    org_n=org_n//10
+##    
+##
+##if res==temp:
+##    print("Armstrong number")
+##else:
+##    print("Not an armstrong number")
 
 
+##Check if 2nd largest is even or odd in a list
+##idx=0
+##ls=[600,39,10,984,486]
+##l_n=0
+##i=0
+##while i<len(ls):
+##    if ls[i]>l_n:
+##        l_n=ls[i]
+##        idx=i
+##    i+=1
+##ls.pop(idx)
+##l_2=0
+##i=0
+##
+##while i<len(ls):
+##    if ls[i]>l_2:
+##        l_2=ls[i]
+##    i+=1
+##
+##if l_2%2:
+##    print("odd")
+##else:
+##    print("even")
 
 
+#Write program to right fibonacci series
+##n=int(input("Enter number:"))
+##ls=[0,1]
+##i=0
+##while i<n:
+##    ls.append(ls[i]+ls[i+1])
+##    
+##    i+=1
+##print(ls)
 
 
+##WAP to calculate factorial of a number
 
+
+##n=int(input("Enter number:"))
+##res=1
+##i=0
+##while i<n:
+##    res*=n-i
+##    i+=1
+##print(res)
+
+
+# WAP to convert a integer into binary without bin function
+
+
+##n=int(input("Enter number:"))
+##temp=n
+##ls=[]
+##string=""
+##i=1
+##while temp!=0:
+##    rem=temp%2
+##    string+=str(rem)
+##    temp=temp//2
+##    i+=1
+##
+##print(string[::-1])
 
 
 

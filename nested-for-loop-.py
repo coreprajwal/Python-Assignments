@@ -133,7 +133,7 @@
 ##    print(f'{"* "*i:^10}')
    
 
-
+# Sum of integer numbers
 
 ##ls=[1,-5,2,0.5]
 ##
@@ -145,21 +145,123 @@
 ##print(summ)
 
 
-s="Hello"
-r=""
-
-for i in range(-1,(-len(s)+1,-1):
-    r+=s[i]
-
-print(r)
-
-
+##s="Hello"
+##r=""
+##
+##for i in range(-1,(-len(s)+1,-1):
+##    r+=s[i]
+##
+##print(r)
 
 
+# WAP to find 10th prime number
+##n=10
+##count=0
+##x=1
+##
+##while count<n:
+##    x+=1
+##    flag=True
+##    for i in range(2,x):
+##        if x%i==0:
+##            flag=False
+##    if flag:
+##        count+=1
+##print(x)
+    
+##num=10
+##n=2
+##count=0
+##while count<=num:
+##    flag=True
+##    for i in range(2,count):
+##        if n%i==0:
+##            flag=False
+##    if flag:
+####        print("prime",n)
+##        count+=1
+##    n+=1
+##
+##print(n-1)
+
+
+# Check if a number is perfect number or not
+##n=28
+##s=0
+##i=1
+##
+##while i<n:
+##    if n%i==0:
+##        s+=i
+##    i+=1
+##if s==n:
+##    print("Its a perfect number:",s)
+
+
+# Print 6th perfect number
+##n=6
+##i=2
+##count=0
+##
+##while count!=n:
+##    s=0
+##    c=1
+##    while c<n:
+##        if i%c==0:
+##            s+=c
+##        c+=1
+##        
+##    if s==c:
+##        print("Its a perfect number:",c)
+##        count+=1
+##    
+##    i+=1
+##print()
+
+# Wap to find nth palindrome number
+
+##n=10
+##i=1
+##count=0
+##
+##while count!=n:
+##    if str(i)==str(i)[::-1]:
+##        count+=1
+##    i+=1
+##print(i-1)
+
+
+
+n=1000
+count=0
+x=1
+
+while count<n:
+    res=0
+    temp=x
+    while temp:
+        last=temp%10
+        res=res*10 + last
+        temp//=10
+    if res==x:
+        count+=1
+    x+=1
+print(x-1)
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+    
 
 
 
