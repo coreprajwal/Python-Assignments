@@ -232,27 +232,83 @@
 
 
 
-n=1000
-count=0
-x=1
-
-while count<n:
-    res=0
-    temp=x
-    while temp:
-        last=temp%10
-        res=res*10 + last
-        temp//=10
-    if res==x:
-        count+=1
-    x+=1
-print(x-1)
-
-
+##n=1000
+##count=0
+##x=1
+##
+##while count<n:
+##    res=0
+##    temp=x
+##    while temp:
+##        last=temp%10
+##        res=res*10 + last
+##        temp//=10
+##    if res==x:
+##        count+=1
+##    x+=1
+##print(x-1)
 
 
+# Addition between 2 matrix
+
+##m1=eval(input("Enter matrix 1:"))
+##m2=eval(input("Enter matrix 2:"))
+##
+##r=[]
+##
+##for i in range(len(m1)):
+##    t=[]
+##    for j in range(len(m1[i])):
+##        t.append(m1[i][j]+m2[i][j])
+##    r.append(t)
+##
+##print(r)
 
 
+##m1=eval(input("Enter matrix 1:"))
+##m2=eval(input("Enter matrix 2:"))
+##
+##r=[]
+##
+##for i in range(len(m1)):
+##    r.append([])
+##    for j in range(len(m1[i])):
+##        r[i].append(m1[i][j]+m2[i][j])
+##
+##print(r)
+        
+    
+# Wap transpse
+
+
+
+##m=[[1,6,3],[4,2,8],[2,1,9]]
+##r=[]
+##
+##for i in range(len(m)):
+##    r.append([])
+##    for j in range(len(m[i])):
+##        r[i].append(m[j][i])
+##
+##print(r)
+
+
+# WAP to check if a number is strong or not
+
+n=145
+r=0
+for i in str(n):
+    s=1
+    for j in range(1,int(i)+1):
+        s*=j
+    r+=s
+
+if n==r:
+    print("Strong number:",r)
+else:
+    print(r)
+        
+        
 
 
 
