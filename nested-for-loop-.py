@@ -295,22 +295,188 @@
 
 # WAP to check if a number is strong or not
 
-n=145
-r=0
-for i in str(n):
-    s=1
-    for j in range(1,int(i)+1):
-        s*=j
-    r+=s
+##n=145
+##r=0
+##for i in str(n):
+##    s=1
+##    for j in range(1,int(i)+1):
+##        s*=j
+##    r+=s
+##
+##if n==r:
+##    print("Strong number:",r)
+##else:
+##    print(r)
+        
 
-if n==r:
-    print("Strong number:",r)
+
+# Sudoku------------------------------------------------
+
+
+#False (Duplicates in mini matri)
+##m = [
+##    [1,2,3,4,5,6,7,8,9],
+##    [2,3,4,5,6,7,8,9,1],
+##    [3,4,5,6,7,8,9,1,2],
+##    [4,5,6,7,8,9,1,2,3],
+##    [5,6,7,8,9,1,2,3,4],
+##    [6,7,8,9,1,2,3,4,5],
+##    [7,8,9,1,2,3,4,5,6],
+##    [8,9,1,2,3,4,5,6,7],
+##    [9,1,2,3,4,5,6,7,8]
+##]
+
+#True
+##m = [
+##    [5,3,4,6,7,8,9,1,2],
+##    [6,7,2,1,9,5,3,4,8],
+##    [1,9,8,3,4,2,5,6,7],
+##    [8,5,9,7,6,1,4,2,3],
+##    [4,2,6,8,5,3,7,9,1],
+##    [7,1,3,9,2,4,8,5,6],
+##    [9,6,1,5,3,7,2,8,4],
+##    [2,8,7,4,1,9,6,3,5],
+##    [3,4,5,2,8,6,1,7,9]
+##]
+
+m = [
+    [5,3,4,6,7,8,9,1,2],
+    [6,7,2,1,9,5,3,4,8],
+    [1,9,8,3,4,2,5,6,7],
+    [8,5,9,7,6,1,4,2,3],
+    [4,2,6,8,5,3,7,9,1],
+    [7,1,3,9,2,4,8,5,6],
+    [9,6,1,5,3,7,2,8,4],
+    [2,8,7,4,1,9,6,3,5],
+    [3,4,5,2,8,6,1,7,9]
+]
+
+# False (duplicate in columns)
+##m = [
+##    [5,3,4,6,7,8,9,1,2],
+##    [5,7,2,1,9,6,3,4,8],
+##    [1,9,8,3,4,2,5,6,7],
+##    [8,5,9,7,6,1,4,2,3],
+##    [4,2,6,8,5,3,7,9,1],
+##    [7,1,3,9,2,4,8,5,6],
+##    [9,6,1,5,3,7,2,8,4],
+##    [2,8,7,4,1,9,6,3,5],
+##    [3,4,5,2,8,6,1,7,9]
+##]
+
+# Duplicate in 3x3 - False
+##m = [
+##    [5,3,4,6,7,8,9,1,2],
+##    [6,5,2,1,9,5,3,4,8],
+##    [1,9,8,3,4,2,5,6,7],
+##    [8,5,9,7,6,1,4,2,3],
+##    [4,2,6,8,5,3,7,9,1],
+##    [7,1,3,9,2,4,8,5,6],
+##    [9,6,1,5,3,7,2,8,4],
+##    [2,8,7,4,1,9,6,3,5],
+##    [3,4,5,2,8,6,1,7,9]
+##]
+
+
+#False
+##m = [
+##    [1,2,3,4,5,6,7,8,9],
+##    [2,3,4,5,6,7,8,9,1],
+##    [3,4,5,6,7,8,9,1,2],
+##    [4,5,6,7,8,9,1,2,3],
+##    [5,6,7,8,9,1,2,3,4],
+##    [6,7,8,9,1,2,3,4,5],
+##    [7,8,9,1,2,3,4,5,6],
+##    [8,9,1,2,3,4,5,6,7],
+##    [9,1,2,3,4,5,6,7,8]
+##]
+
+final_flag=True
+reason=[]
+rs=0
+for i in range(len(m)):
+    cs=0
+    temp=[] # column values
+    for j in range(len(m[i])):
+
+        if m[i][j]<1 or m[i][j]>9:
+            final_flag=False
+            reason.append("contains 0 or higher than 9 digit")
+        
+        cs+=m[i][j]
+        rs+=m[j][i]
+        temp.append(m[j][i]) # column values getting stored
+        temp2=m[i].copy()
+        rem=temp2.pop(j)
+        if m[i][j] in temp2:
+            final_flag=False
+            reason.append("rows have duplicates ")
+            
+        temp2.insert(j,rem)
+
+    # column duplicate check
+    col_val=temp.copy()
+    cr=col_val.pop(i)
+
+    if temp[i] in col_val:
+        final_flag=False
+    col_val.insert(i,cr)
+
+    if cs!=45 and rs!=45:
+        final_flag=False
+        reason.append("rows or column sum is not 45 ")
+
+
+
+size=3
+initial=0
+
+while initial<=6: # Accessing all mini matrix elements
+    end=initial+size
+    m1=[]
+    
+    for c in range(initial,end):
+        ms_init=0
+        ms_size=3
+        
+        while ms_init<=2:
+            ms_end=ms_init+ms_size
+            for k in range(initial,ms_end):
+                m1.append(m[c][k])  # Storing mini matrix elements
+            ms_init=ms_init+ms_end
+                
+            
+    tempm1=m1.copy()
+    for f in range(len(m1)):
+        #Checking unique in mini matrix
+        removed=tempm1.pop(f)
+        if m1[f] in tempm1:
+            final_flag=False
+            reason.append("Duplicates in mini matrix")
+        tempm1.insert(f,removed)
+
+
+        # Checking sum in mini matrix
+        m1s=0
+        for i in m1:
+            m1s+=i
+        if m1s != 45: 
+            final_flag=False
+            reason.append(f"Mini matrix sum is not 45: its {m1s} its list: {m1}",)
+                
+    initial=end
+
+
+
+if final_flag:
+    print("Valid Sudoku")
 else:
-    print(r)
+    print("Not a valid Sudoku\n",reason)
         
-        
+    
 
 
+# WAP to print 4th strong number
 
 
 
