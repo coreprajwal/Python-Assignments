@@ -104,7 +104,7 @@
 # WAP to find the sum of all the numbers present in a list
 # but skip prime numbers
 
-ls=[1,2,3,4,5,6]
+##ls=[1,2,3,4,5,6]
 ##s=0
 ##for i in ls:
 ##    flag=True
@@ -127,27 +127,56 @@ ls=[1,2,3,4,5,6]
 
 
 # Wap to find the distinct 2nd largest number
+##(Solve again)
 
-a=[1,6,2,2,11,9,11,9,5]
+##a=[1,6,2,2,11,9,11,9,5]
+##
+##
+##l=a[0]
+##sl=float('-inf')
+##
+##for i in a:
+##    if a.count(i)>1:
+##        continue
+##    if i>l:
+##        sl=l
+##        l=i
+##    elif l>i>sl:
+##        sl=i
+##        
+##
+##print(ls[-2])
 
-
-l=a[0]
-sl=float('-inf')
-
-for i in a:
-    if a.count(i)>1:
-        continue
-    if i>l:
-        sl=l
-        l=i
-    elif l>i>sl:
-        sl=i
-        
-
-print(ls[-2])
-        
     
+##for i in range(1000):   
+##    pass
 
+
+# Wap to check whether the zigzag non-prime
+##(Solve again)
+
+##n=5
+##
+##count=0
+##i=1
+##while count<6:
+##    flag=False
+##
+##    
+##    
+##    for j in range(2,i):
+##        if i%j==0 or i!=2:
+##            flag=True
+##
+##    
+##    if not flag:
+##        print(i,end="")
+##
+##    print()
+##    count+=1
+##    i+=1
+    
+    
 
 
 
