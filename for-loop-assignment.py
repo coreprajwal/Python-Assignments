@@ -211,6 +211,19 @@
 
 ##20.	Check Armstrong numbers between 1–500.
 
+##for n in range(1,501):
+##    temp=n
+##    digit_count= len(str(temp))
+##    res=0
+##    while temp:
+##        rem=temp%10
+##        res+=rem**digit_count
+##        temp=temp//10
+##    if res==n:
+##        print(f"{n} is an armstrong number.")
+        
+        
+
 
 
 ##--------------while Loop (10 Questions)-------------------
@@ -323,6 +336,8 @@
 ##        break
 ##    print("User not found!")
 
+
+
 ##10.	Guessing game (loop until correct guess).
 ##rn=88
 ##while True:
@@ -331,6 +346,8 @@
 ##        print("You guessed it Right!!! Congrats!")
 ##        break
 ##    print("Wrong guess, try again ---")
+
+
 
 ##11.	Reverse number and check palindrome.
 ##ori_n=int(input("Enter number:"))
@@ -381,11 +398,86 @@
 
 ##15.	Fibonacci until value exceeds 1000.
 
+##current_fibo=0
+##i=1
+##while current_fibo<1000:
+##    fibo=1
+##    for f in range(1,i+1):
+##        fibo*=f
+##    if fibo<1000:
+##        print(f"Fibonacci of {i} is {fibo}")
+##    current_fibo=fibo
+##    i+=1
+    
 
 
 ##16.	ATM simulation until exit option selected.
+
+##acc={}
+##flag=True
+##
+##while flag:
+##    u=input("Enter username:")
+##    n=int(input("Enter 1: Add money, 2: Withdraw, 3:Exit :-"))
+##    if (u not in acc) or (n not in [1,2,3]):
+####        print("Enter valid username and number!!")
+##        print("It seems you don't have an account!! Let's create it --")
+##        new_user=input("Enter username:")
+##        
+##        store=input("Do you want to store amount? y/1 0/y :-")
+##        if store:
+##            amnt=int(input("Enter amount to store:"))
+##            acc[new_user]=amnt
+##        else:
+##            acc[new_user]=0
+##    elif n==1:
+##        print("Current balance:",acc[u])
+##        amount=int(input("Enter amount:"))
+##        acc[u]+=amount
+##        print(f"Amount added successfully!!\n Current balance: {acc[u]}")
+##    elif n==2:
+##        print(f"Current balance: {acc[u]}")
+##        amount=int(input("Enter amount to be withdrawn:"))
+##        if acc[u]<amount:
+##            print(f"Not enough money!\n Current balance: {acc[u]}")
+##        else:
+##            acc[u]-=amount
+##            print(f"Amount Withdrawn successfully!!\n Current balance: {acc[u]}")
+##        
+##    elif n==3:
+##        "Exiting system--"
+##        flag=False
+    
+        
+
+
 ##17.	Count number of prime digits in a number.
+##n=int(input("Enter number:"))
+##temp=n
+##count=0
+##while temp:
+##    rem=temp%10
+##
+##    flag=True
+##    if rem>1:
+##        for i in range(2,rem):
+##            if temp%i==0:
+##                flag=False
+##    if flag:
+##        count+=1
+##    
+##    temp=temp//10
+##print(f"No. of Prime digits are: {count}")
+
+
 ##18.	Convert decimal to binary manually.
+##n=int(input("Enter number:"))
+##res=""
+##while n:
+##    res+=str(n%2)
+##    n=n//2
+##print(int(res[::-1]))
+
 
 ##19.	Calculate power without using ** operator.
 ##n=int(input("Enter base value:"))
@@ -396,6 +488,49 @@
 ##print("Exponent answer is :",temp)
 
 ##20.	Keep dividing number by 2 until it becomes 1.
+
+##n=int(input("Enter number:"))
+##
+##while n!=1:
+##    n=n//2
+##    print(n)
+    
+
+
+
+
+a=[100,50,300,150,50,200]
+temp=a.copy()
+n=300
+fls=[]
+res=0
+for i in range(len(a)):
+    flag=False
+    fls.append(a[i])
+    res+=a[i]
+    rem=temp.pop(i)
+    for j in range(len(temp)):
+        if res+temp[j]>n:
+            print(f"Skipping: {temp[j]}, because sum is: {res+temp[j]}")
+            continue
+        elif res+temp[j]==n:
+            print("Successfully found the pairs: sum is {res+temp[j]}")
+            fls.append(temp[j])
+            flag=True
+            break
+        elif res+temp[j]<n:
+            res+=temp[j]
+            fls.append(temp[j])
+            print(f"for {temp[j]} sum is less than {n}, \ncurrent res:{res}")
+    temp.insert(i,rem)
+    if flag:
+        fls.append([n])
+        break
+print(fls)
+            
+    
+    
+
 
 
 

@@ -159,22 +159,25 @@
 ##Wap to check whether the given number is an armstrong number or not
 
 
-n=153
-res=0
+##n=153
+##res=0
+##
+##def isarmstrong(n):
+##    digits=len(str(n))
+##    temp=n
+##    res=0
+##    while temp:
+##        rem=temp%10
+##        res+=rem**digits
+##        temp=temp//10
+##        
+##    return res==n
+##    
+##
+##print(isarmstrong(152))
 
-def isarmstrong(n):
-    digits=len(str(n))
-    temp=n
-    res=0
-    while temp:
-        rem=temp%10
-        res+=rem**digits
-        temp=temp//10
-        
-    return res==n
-    
 
-print(isarmstrong(152))
+
 ##for i in str(n):
 ##    res+=int(i)**(len(list(str(n))))
 ##
@@ -188,14 +191,50 @@ print(isarmstrong(152))
 
 
 
+## ARGUMENTS ---------------------------------
 
 
+##def demo(a,b,c,d,e):
+##    print(a,b,c,d,e)
+##
+##demo(10,20,30,40,50)
+##demo(10,20,c=30,e=50,d=40)
+
+##demo(10,20,30,c=100,d=40,e=50) ## Error
+
+##demo(10,20,30,d=40,500)
 
 
+# Positional only arguments ------------
+
+##def add(a,b,c):
+##    print(a,b,c)
+##
+##add(10,20,30)
+##add(a=10,b=20,c=30)
+
+##def add(a,b,c,/): ## / represent positional only arguments.
+##    print(a,b,c)
+##
+##add(10,20,30)
+##add(a=10,b=20,c=30)
 
 
+# Keyword only argument ------------
+##def info(*,name ,age, ph_no, add): ## '*' represents keyword only arguments
+##    print(name,age,ph_no,add)
+##
+##info(name="anurag",age=20,ph_no=2353253252,add="purvanchal")
 
 
+# Combination on position only and keyword only
+
+def info(name,/,age,*,dob,add):
+    print(name,age,dob,add)
+
+##info ("anurag",20,'8-3-2006','mumbai')# error- 4 positional args
+
+info("anurag",20,dob='8-11-2006',add='mumbai')
 
 
 
